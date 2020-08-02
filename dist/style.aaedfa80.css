@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* style */
+
+.globalHeader {
+  margin: 20px 30px;
+}
+.search-Form {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  .search-Form {
+    max-width: 400px;
+    margin: 60px auto 80px auto;
+    /* box-shadow: 0 3px 8px #dddddd; */
+  }
+  .search-Form > input {
+    box-shadow: 2px 2px 8px #909090;
+  }
+}
+.search-Form > input {
+  width: 100%;
+  height: 42px;
+  padding-left: 12px;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.search-Form > button {
+  white-space: nowrap;
+  padding: 8px 20px;
+  font-size: 16px;
+  margin-left: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: #0b67bb;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.globalMain {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.siteList {
+  margin: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  .siteList {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+    margin-right: -35px;
+  }
+}
+.siteList > li {
+  margin-bottom: 10px;
+}
+@media (min-width: 500px) {
+  .siteList > li {
+    margin-right: 35px;
+  }
+  .siteList .site:hover {
+    background-color: rgb(242, 242, 242);
+  }
+}
+.siteList .site {
+  width: 152px;
+  height: 123px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+
+.siteList .site > .logo {
+  width: 70px;
+  height: 70px;
+  font-size: 64px;
+  line-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.siteList .site > .link {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.siteList .site > .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.siteList .site > .more {
+  display: none;
+}
+@media (min-width: 500px) {
+  /* 隐藏 */
+  .siteList .site > .close {
+    display: none;
+  }
+  .siteList .site > .more {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .siteList .site:hover > .more {
+    display: block;
+  }
+}
+.siteList .addSite {
+  width: 152px;
+  height: 123px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+@media (min-width: 500px) {
+  .siteList .addSite:hover {
+    background-color: rgb(242, 242, 242);
+  }
+}
+.siteList .addSite > .icon {
+  width: 70px;
+  height: 70px;
+}
+.siteList .addSite > .text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+#favDialog {
+  border: 1px solid #dddddd !important;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#favDialog > .dialog-title {
+  font-size: 16px;
+  margin: 20px 15px 10px 15px;
+}
+
+.dialog-form > .container {
+  margin: 20px 15px;
+}
+.dialog-form > .container > label {
+  font-size: 10px;
+}
+.dialog-form > .container input {
+  width: 320px;
+  height: 34px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background-color: rgb(241, 243, 244);
+  /* box-shadow: 2px 2px 10px #909090; */
+}
+.buttons-container {
+  /* border: 1px solid red; */
+  margin: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons-container > button {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  color: rgb(41, 123, 231);
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/*# sourceMappingURL=style.aaedfa80.css.map */
