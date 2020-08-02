@@ -125,11 +125,23 @@ var inputText = $(".input-text");
 var x = localStorage.getItem("x");
 var xObject = JSON.parse(x);
 var hashMap = xObject || [{
-  logo: "A",
-  url: "https://www.acfun.cn"
+  logo: "b",
+  url: "https://bilibili.com"
 }, {
-  logo: "B",
-  url: "https://www.bilibili.com"
+  logo: "i",
+  url: "https://www.iconfont.cn"
+}, {
+  logo: "j",
+  url: "https://juejin.im"
+}, {
+  logo: "z",
+  url: "https://www.zhihu.com"
+}, {
+  logo: "y",
+  url: "https://www.yuque.com"
+}, {
+  logo: "c",
+  url: "https://css-tricks.com"
 }];
 
 var simplifyUrl = function simplifyUrl(url) {
@@ -154,18 +166,19 @@ var render = function render() {
 
       inputText.attr("value", hashMap[index].url).attr("onfocus", inputText.select());
       $(".cancelUrl").on("click", function () {
-        // $("cancelUrl").unbind("click");
         window.location.reload();
       });
       $(".deleteUrl").on("click", function () {
-        $(".deleteUrl").unbind("click");
+        // $(".deleteUrl").unbind("click");
         hashMap.splice(index, 1);
         render();
+        window.location.reload();
       });
       $(".confirmUrl").on("click", function () {
         var newUrl = inputText.val();
         hashMap[index].url = newUrl;
         render();
+        window.location.reload();
       });
     });
   });
@@ -201,4 +214,4 @@ $(document).on("keypress", function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.9b802c6a.js.map
+//# sourceMappingURL=main.cebe5595.js.map

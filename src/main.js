@@ -7,8 +7,12 @@ const inputText = $(".input-text");
 const x = localStorage.getItem("x");
 const xObject = JSON.parse(x);
 const hashMap = xObject || [
-  { logo: "A", url: "https://www.acfun.cn" },
-  { logo: "B", url: "https://www.bilibili.com" },
+  { logo: "b", url: "https://bilibili.com" },
+  { logo: "i", url: "https://www.iconfont.cn" },
+  { logo: "j", url: "https://juejin.im" },
+  { logo: "z", url: "https://www.zhihu.com" },
+  { logo: "y", url: "https://www.yuque.com" },
+  { logo: "c", url: "https://css-tricks.com" },
 ];
 
 const simplifyUrl = (url) => {
@@ -47,19 +51,20 @@ const render = () => {
         .attr("value", hashMap[index].url)
         .attr("onfocus", inputText.select());
       $(".cancelUrl").on("click", () => {
-        // $("cancelUrl").unbind("click");
         window.location.reload();
       });
 
       $(".deleteUrl").on("click", () => {
-        $(".deleteUrl").unbind("click");
+        // $(".deleteUrl").unbind("click");
         hashMap.splice(index, 1);
         render();
+        window.location.reload();
       });
       $(".confirmUrl").on("click", () => {
         let newUrl = inputText.val();
         hashMap[index].url = newUrl;
         render();
+        window.location.reload();
       });
     });
   });
