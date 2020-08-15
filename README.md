@@ -1,6 +1,6 @@
 ## 开启服务器
 ```
-yarn global add parcel-bundler
+yarn global add parcel-builder
 parcel src/index.html
 
 ```
